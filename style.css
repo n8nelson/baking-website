@@ -1,0 +1,116 @@
+body {
+    /* background-image: url("Images/annie-spratt-EACvtuV2k2E-unsplash.jpg"); */
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover;
+    /* background-color: #cccccc; */
+    /* background-color: #f4decb; */
+    background-color: #f8eee7;
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 28px;
+    color: #49274a;
+   }
+
+   .header {
+    padding: 80px;
+    text-align: center;
+    /* background: #1abc9c; */
+    background-image: url("Images/annie-spratt-EACvtuV2k2E-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #94618e;
+    /* background-blend-mode: multiply; */
+    filter: sepia(0%) saturate(70%) brightness(100%) hue-rotate(330deg);
+    background-size: cover;
+    color: white;
+   }
+
+   .header h1 {
+       font-size: 40px;
+   }
+
+   .topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #94618e;
+    color: #f4decb;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #49274a;
+  }
+  
+  .active {
+    background-color: #49274a;
+  }
+
+   .footer {
+    padding: 20px;
+    text-align: center;
+    /* background: #ddd; */
+    background: #f4decb;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25)
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25)
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25)
+  }
+  
+  .fa-instagram {
+    /* background: #125688;*/
+    color: white;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25)
+  }
+
+  @media screen and (max-width: 600px) {
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+  }
