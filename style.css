@@ -1,3 +1,8 @@
+/* * {
+  /* box-sizing: border-box; */
+  /* padding: 0;
+}*/
+
 body {
     /* background-image: url("Images/annie-spratt-EACvtuV2k2E-unsplash.jpg"); */
     /* background-repeat: no-repeat;
@@ -6,7 +11,8 @@ body {
     /* background-color: #cccccc; */
     /* background-color: #f4decb; */
     background-color: #f8eee7;
-
+    box-sizing: border-box;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     font-size: 28px;
@@ -63,6 +69,74 @@ body {
     background-color: #49274a;
   }
 
+  main {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    gap: 40px;
+    padding: 60px 0;
+  }
+
+  .cards {
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    gap: 40px;
+  }
+
+  .card {
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: #fcdcc5;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  .card:hover {
+    transform: translateY(-7px);
+  }
+
+  .text--medium {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .card-image-container {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+  }
+
+.card-image-container img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  margin-bottom: 20px;
+}
+
+.card-info {
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+
+.card-price {
+  margin-left: auto;
+  padding: 0px 20px;
+  border-radius: 10px;
+}
+
    .footer {
     padding: 20px;
     text-align: center;
@@ -110,7 +184,34 @@ body {
     box-shadow: 0px 3px 10px rgba(0,0,0,.25)
   }
 
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
+    .card {
+      grid-column-end: span 6;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    main {
+      gap: 20px;
+    }
+    .card {
+      grid-column-end: span 12;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
     ul.topnav li.right, 
     ul.topnav li {float: none;}
+    main {
+      grid-template-columns: 10px repeat(6, 1fr) 10px;
+      gap: 10px;
+    }
+    .cards {
+      grid-column: 2 / span 6;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+    .card {
+      grid-column-end: span 6;
+    }
   }
